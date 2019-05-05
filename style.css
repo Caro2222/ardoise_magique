@@ -1,0 +1,25 @@
+canvas {
+    border:solid black 5px;
+
+}
+
+.color1 {
+    color: rgba(255,0,0,1);
+}
+
+.color2 {
+    color:rgba(0,255,0,1);
+}
+
+.color3 {
+    color: rgba(0,0,255,1);
+
+}
+
+.color4 {
+    color: rgba(155,150,0,1);
+}
+
+.color5 {
+    color: rgba(0,155,255);
+}
