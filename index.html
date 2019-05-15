@@ -3,22 +3,45 @@
 <head>
 	<title>Ardoise magique</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="js/Slate.class.js"></script>
+	<script src="js/Palette.class.js"></script>
+	<script src="js/Program.class.js"></script>
+	<script src="js/Bross.class.js" ></script>
 </head>
 <body>
 
 	<input type="submit" value="effacer">
-	<canvas id="ardoiseMagique" width="800" height="600"></canvas>
 
+	<canvas id="ardoiseMagique" width="800" height="600"></canvas>
+	<div class="flex">
 	<canvas id="ColorPicker" width="250" height="250">Color picker :
+		<!--<div class="color1"></div>
+		<div class="color2"></div>
+		<div class="color3"></div>
+		<div class="color4"></div>
+		<div class="color5"></div>-->
 
 	</canvas>
 
 	<div id="picker"></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<button id="btnDisplay">Changer couleur</button>
+		<div class="taille">
+	<button id="btnBross">Changer Taille du pinceau</button>
+			<div id="btns">
+				<label for="rangeSize" ></label>
+				<input type="range" id="rangeSize" max="100" min="1" value="1">
+<!--			<button id="littleSize">Petite taille</button>-->
+<!--				<button id="mediumSize">Medium taille</button>-->
+
+<!--				<button id="bigSize">Grande taille</button>-->
+				<span id="displaySize">1</span>
+			</div>
+		</div>
+
+	</div>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script src="js/Picker.class.js"></script>
-	<script src="js/Slate.class.js"></script>
-<script src="js/Color.class.js"></script>
 </body>
 </html>

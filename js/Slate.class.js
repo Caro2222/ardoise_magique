@@ -18,6 +18,8 @@ function Slate()
 
     var btnEffacer=document.querySelector('input');
     btnEffacer.addEventListener('click',this.efface.bind(this));
+   // this dessin=loadFormLocalStorage();
+    this.context.lineCap = "round";
 
 }
 
@@ -44,7 +46,7 @@ Slate.prototype.onMouseDown = function()
 {
 
     this.isDrawing = true ;
-    // this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
+    this.formerPosition = this.getMousePosition(event);
 };
 Slate.prototype.onMouseUp = function()
 {
@@ -71,6 +73,7 @@ Slate.prototype.getMousePosition = function(event)
     location.x= event.clientX-offSet.left-parseInt(styleOffset.borderLeftWidth) ;
     location.y=event.clientY-offSet.top-parseInt(styleOffset.borderTopWidth);
     return location;
+
 };
 
 
@@ -84,5 +87,6 @@ Slate.prototype.draw = function(nextPosition) {
     this.context.lineTo(nextPosition.x, nextPosition.y);
 
     this.context.stroke();
+    $.event.trigger('magic-slate:strokeChange');
 
 };

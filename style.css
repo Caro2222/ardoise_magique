@@ -3,23 +3,25 @@ canvas {
 
 }
 
-.color1 {
-    color: rgba(255,0,0,1);
+#picker {
+    border: solid black 1px;
+    width: 100px;
+    height: 100px;
 }
 
-.color2 {
-    color:rgba(0,255,0,1);
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.color3 {
-    color: rgba(0,0,255,1);
-
+button {
+    height: 30px;
 }
 
-.color4 {
-    color: rgba(155,150,0,1);
-}
+.taille {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-.color5 {
-    color: rgba(0,155,255);
 }
